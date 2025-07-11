@@ -25,3 +25,4 @@ Este proyecto permite estimar las calorías de un plato de comida a partir de un
 ```bash
 git clone https://github.com/tu_usuario/ckalAlimentos.git
 cd ckalAlimentos
+![Texto alternativo](Flujo.png)
