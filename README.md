@@ -18,6 +18,10 @@ Este proyecto permite estimar las calorías de un plato de comida a partir de un
 4. OpenAI responde con una descripción del plato y una estimación de calorías.
 5. n8n recibe la respuesta y la reenvía al usuario por WhatsApp usando UltraMsg.
 
+##  Imágenes
+![Texto alternativo](ContadoedeCalor-as/captcomida.png)
+![Texto alternativo](ContadoedeCalor-as/flujo.png)
+
 ## ⚙️ Instalación y uso
 
 1. **Clonar el repositorio**
@@ -25,4 +29,4 @@ Este proyecto permite estimar las calorías de un plato de comida a partir de un
 ```bash
 git clone https://github.com/tu_usuario/ckalAlimentos.git
 cd ckalAlimentos
-![Texto alternativo](Flujo.png)
+
