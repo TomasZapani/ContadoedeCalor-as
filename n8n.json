@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "path": "estimacion",
+        "responseMode": "responseNode"
+      },
+      "id": "1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{$json[\"media\"]}}",
+        "responseFormat": "file",
+        "options": {}
+      },
+      "id": "2",
+      "name": "Descargar Imagen",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:5000/estimacion",
+        "sendBinaryData": true,
+        "binaryPropertyName": "data",
+        "requestMethod": "POST",
+        "responseFormat": "json"
+      },
+      "id": "3",
+      "name": "Enviar a Flask",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "responseData": "={{$json[\"estimacion\"]}}",
+        "responseCode": 200
+      },
+      "id": "4",
+      "name": "Responder al Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [850, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Descargar Imagen", "type": "main", "index": 0 }]]
+    },
+    "Descargar Imagen": {
+      "main": [[{ "node": "Enviar a Flask", "type": "main", "index": 0 }]]
+    },
+    "Enviar a Flask": {
+      "main": [[{ "node": "Responder al Webhook", "type": "main", "index": 0 }]]
+    }
+  }
+}
