@@ -19,7 +19,7 @@ Este proyecto permite estimar las calorías de un plato de comida a partir de un
 5. n8n recibe la respuesta y la reenvía al usuario por WhatsApp usando UltraMsg.
 
 ##  Imágenes
-![Texto alternativo](ContadoedeCalor-as/captcomida.png)
+![Texto alternativo](captcomida.png)
 ![Texto alternativo](ContadoedeCalor-as/flujo.png)
 
 ## ⚙️ Instalación y uso
