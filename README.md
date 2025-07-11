@@ -20,7 +20,7 @@ Este proyecto permite estimar las calorías de un plato de comida a partir de un
 
 ##  Imágenes
 ![Texto alternativo](captcomida.png)
-![Texto alternativo](ContadoedeCalor-as/flujo.png)
+![Texto alternativo](flujo.png)
 
 ## ⚙️ Instalación y uso
 
